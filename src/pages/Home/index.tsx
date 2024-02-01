@@ -1,10 +1,12 @@
 
 import HeroSection from "./HeroSection";
+import ServiceSection from "./ServiceSection";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <HeroSection />
+      <ServiceSection/>
     </div>
   );
 };
