@@ -49,7 +49,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 167 100% 44%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -81,6 +81,6 @@
     font-family: "Poppins", sans-serif;
   }
   h1 {
-    @apply text-6xl;
+    @apply text-4xl lg:text-6xl font-semibold;
   }
 }

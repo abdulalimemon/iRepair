@@ -46,49 +46,48 @@ const laptop = {
 
 const HeroSection = () => {
   return (
-    
-      <Container className="grid grid-cols-1 lg:grid-cols-2 h-screen place-content-center gap-10 lg:gap-0">
-        <motion.div
-          className="mt-28 lg:mt-0 w-full mx-auto"
-          variants={intro}
-          initial="hidden"
-          animate="visible"
+    <Container className="grid grid-cols-1 lg:grid-cols-2 h-screen place-content-center gap-10 lg:gap-0">
+      <motion.div
+        className="mt-28 lg:mt-0 w-full mx-auto"
+        variants={intro}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h1
+          className="text-4xl lg:text-8xl font-bold text-nowrap"
+          variants={introChildren}
         >
-          <motion.h1
-            className="text-5xl lg:text-8xl font-bold text-nowrap"
-            variants={introChildren}
-          >
-            <span className="text-gray">Don't worry.</span>
-            <br />
-            <span>We'll fix it.</span>
-          </motion.h1>
-          <motion.p
-            className="text-xl text-gray mt-10 mb-5 max-w-[50ch]"
-            variants={introChildren}
-          >
-            Welcome to <span className="text-black font-semibold dark:text-white">iRepair</span>
-            , your one-stop place for all kinds of{" "}
-            <span className="text-black font-semibold dark:text-white">Macbook repairs</span>{" "}
-            and diagnostics.
-          </motion.p>
-          <motion.div variants={introChildren}>
-            <Button>Book a service</Button>
-          </motion.div>
-        </motion.div>
-        <motion.div
-          className="mt-10 lg:mt-0 w-[85%] md:w-[80%] xl:w-[90%] mx-auto"
-          variants={laptop}
-          initial="initial"
-          animate="animate"
+          <span className="text-gray">Don't worry.</span>
+          <br />
+          <span>We'll fix it.</span>
+        </motion.h1>
+        <motion.p
+          className="text-xl text-gray mt-10 mb-5 max-w-[50ch]"
+          variants={introChildren}
         >
-          <img
-            className="h-[95%] object-contain"
-            src={mackbook}
-            alt="MackBook"
-          />
+          Welcome to{" "}
+          <span className="text-black font-semibold dark:text-white">
+            iRepair
+          </span>
+          , your one-stop place for all kinds of{" "}
+          <span className="text-black font-semibold dark:text-white">
+            Macbook repairs
+          </span>{" "}
+          and diagnostics.
+        </motion.p>
+        <motion.div variants={introChildren}>
+          <Button>Book a service</Button>
         </motion.div>
-      </Container>
-   
+      </motion.div>
+      <motion.div
+        className="mt-10 lg:mt-0 w-[85%] md:w-[80%] xl:w-[90%] mx-auto"
+        variants={laptop}
+        initial="initial"
+        animate="animate"
+      >
+        <img className="h-[95%] object-contain" src={mackbook} alt="MackBook" />
+      </motion.div>
+    </Container>
   );
 };
 
