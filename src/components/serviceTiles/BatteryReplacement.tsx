@@ -1,21 +1,14 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import useScrollGrow from "@/hooks/ScrollGrowHook";
+import { motion} from "framer-motion";
 
 const BatteryReplacement = () => {
-  const componentRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: componentRef,
-    offset: ["0 1", "1 1"],
-  });
-
-  const scaleValues = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-  const opacityValues = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
+  const { componentRef, style } = useScrollGrow();
 
   return (
     <motion.div
       ref={componentRef}
       className="bg-light-gray h-[415px] rounded-lg col-span-12 dark:bg-black/80"
-      style={{ scale: scaleValues, opacity: opacityValues }}
+      style={style}
     >
       <div
         className={`flex bg-[url(/src/assets/image/trackpad.png)] h-full bg-cover md:bg-contain  bg-center md:bg-right bg-no-repeat rounded-lg`}

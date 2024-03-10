@@ -13,16 +13,18 @@ const Navbar = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 1 }}
     >
-      <nav className="w-full max-w-[1230px] mx-auto flex justify-between items-center h-full px-[20px]">
+      <nav className="w-full max-w-[1230px] mx-auto flex justify-between items-center h-full px-[20px] ">
         <Link to="/">
           <span className="text-3xl">iReapir</span>
         </Link>
 
-        <ul className="space-x-5 font-semibold flex items-center">
+        <ul className="space-x-5 font-semibold flex items-center right-0">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <Button>
+          <NavLink to="/services" className="hidden sm:block">
+            Services
+          </NavLink>
+          <Button className="hidden sm:block">
             <NavLink to="/login">Login</NavLink>
           </Button>
           <div className="size-6">
@@ -34,7 +36,6 @@ const Navbar = () => {
               className="absolute h-[1.25rem] w-[1.25rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 cursor-pointer"
               onClick={() => setTheme("light")}
             />
-            
           </div>
         </ul>
       </nav>
